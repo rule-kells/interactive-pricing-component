@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="./main.js"></script>
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <h1 class="fs-heading-l">Simple, traffic-based pricing</h1>
+        <p>Sign-up for our 30-day trial. No credit card required.</p>
+      </div>
+    </header>
+
+    <main class="card">
+      <div class="card__upper">
+        <h2 class="fs-heading-m">
+          <span class="pageview-text">100K</span> Pageviews
+        </h2>
+        <h3 class="fs-heading-xl">
+          $<span class="monthly-price">16</span>.00<span
+            class="fs-heading-month month"
+            >/month</span
+          >
+        </h3>
+        <div class="pricing__slider">
+          <label for="pricing__slider" aria-label="interactive pricing slider">
+            <input
+              id="pricing__slider"
+              name="pricing-slider"
+              class="toggle__pricing--slider"
+              type="range"
+              min="0"
+              step="1"
+              value="2"
+              max="4"
+            />
+          </label>
+        </div>
+        <div class="toggle__pricing">
+          <label class="fs-heading-s" for="monthly">Monthly Billing</label>
+          <div class="toggle__pricing--wrapper">
+            <input type="radio" id="monthly" name="billing" checked />
+            <input type="radio" id="yearly" name="billing" />
+            <span aria-hidden="true" class="toggle__bg"></span>
+            <span aria-hidden="true" class="toggle__switcher"></span>
+          </div>
+          <label class="fs-heading-s" for="yearly">Yearly Billing</label>
+          <h4 class="fs-heading-xs">
+            25% <span class="hidden">discount</span>
+          </h4>
+        </div>
+      </div>
+
+      <div class="card__lower">
+        <ul class="card__features--list flow">
+          <li class="fs-heading-s card__features--item">
+            <img src="./images/icon-check.svg" alt="" /> Unlimited websites
+          </li>
+          <li class="fs-heading-s card__features--item">
+            <img src="./images/icon-check.svg" alt="" /> 100% data ownership
+          </li>
+          <li class="fs-heading-s card__features--item">
+            <img src="./images/icon-check.svg" alt="" /> Email reports
+          </li>
+        </ul>
+        <button class="btn fs-heading-s">Start my trial</button>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Kellen Ruyle</a>.
+    </footer>
+  </body>
+</html>
